@@ -1,0 +1,26 @@
+name: Update resume gist
+
+# Pushes resume.json to the gist that backs https://registry.jsonresume.org/kriszmagyar
+on:
+  push:
+    branches: [master]
+    paths: ['resume.json']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  update-gist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate resume.json
+        run: jq empty resume.json
+
+      - name: Update gist
+        env:
+          GH_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: ${{ vars.GIST_ID }}
+        run: gh gist edit "$GIST_ID" resume.json
