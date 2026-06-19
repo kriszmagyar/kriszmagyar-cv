@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "jsonresume-theme-elegant": "^1.16.1",
+    "jsonresume-theme-even": "^0.26.1"
+  },
+  "name": "magyark-cv",
+  "version": "1.0.0",
+  "description": "Krisztian Magyar - JSON Resume source",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "patch-package": "^8.0.1"
+  }
+}

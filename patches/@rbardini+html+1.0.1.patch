@@ -1,0 +1,17 @@
+diff --git a/node_modules/@rbardini/html/cjs/mod.js b/node_modules/@rbardini/html/cjs/mod.js
+new file mode 100644
+index 0000000..6335d50
+--- /dev/null
++++ b/node_modules/@rbardini/html/cjs/mod.js
+@@ -0,0 +1,11 @@
++"use strict";
++Object.defineProperty(exports, "__esModule", { value: true });
++exports.html = function(strings) {
++    var values = Array.prototype.slice.call(arguments, 1);
++    return strings.reduce(function(acc, string, i) {
++        var value = values[i];
++        if (Array.isArray(value)) return acc + string + value.join('');
++        if (value != null && !!value !== value) return acc + string + value;
++        return acc + string;
++    }, '');
++};
