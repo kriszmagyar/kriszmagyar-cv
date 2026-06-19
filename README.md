@@ -27,14 +27,28 @@ resume serve
 
 Opens a live preview at `http://localhost:4000` using the default theme.
 
-## Export to PDF / HTML
+## Export
+
+Validates, cleans `generated/`, exports HTML + PDF + Markdown, and runs an ATS audit:
 
 ```bash
-# HTML
-resume export resume.html
+npm run export
+```
 
-# PDF (requires a theme that supports it, e.g. kendall)
-resume export resume.pdf --theme kendall
+Output lands in `generated/krisz-magyar-cv-full.{html,pdf,md}`.
+
+To use a different name or theme (default: `elegant`):
+
+```bash
+npm run export -- <name> <theme>
+# e.g.
+npm run export -- krisz-magyar-cv-full even
+```
+
+Available themes are printed at the start of each run. Install more with:
+
+```bash
+npm install jsonresume-theme-<name>
 ```
 
 ## Validate
@@ -42,12 +56,6 @@ resume export resume.pdf --theme kendall
 ```bash
 resume validate
 ```
-
-## Themes
-
-Browse themes at https://www.npmjs.com/search?q=jsonresume-theme and pass `--theme <name>` to any export command.
-
-Popular choices: `flat`, `kendall`, `paper`, `macchiato`.
 
 ## Hosting
 
