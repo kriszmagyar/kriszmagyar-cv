@@ -21,6 +21,9 @@ echo ""
 mkdir -p "$OUT"
 rm -f "$OUT"/*
 
+# basics.image/picture is a public URL, so it resolves everywhere (serve,
+# standalone HTML, and the headless-browser PDF render) with no preprocessing.
+
 HTML_THEME="$THEME"
 PDF_THEME="$THEME"
 echo "Generating files  [theme: $THEME, output: $OUT/]"
@@ -35,6 +38,7 @@ if ! resume export "$OUT/$NAME.pdf" --theme "$THEME" --format pdf 2>/dev/null; t
   resume export "$OUT/$NAME.pdf" --theme "$PDF_THEME" --format pdf
 fi
 resume export "$OUT/$NAME.md" --format md
+
 echo ""
 
 echo "Running ATS audit  [theme: $THEME]..."

@@ -3,8 +3,8 @@
   "basics": {
     "name": "Krisztián Magyar",
     "label": "Senior Software Engineer - Java & Kafka",
-    "picture": "profile.jpg",
-    "image": "profile.jpg",
+    "picture": "https://raw.githubusercontent.com/kriszmagyar/kriszmagyar-cv/master/public/profile.jpg",
+    "image": "https://raw.githubusercontent.com/kriszmagyar/kriszmagyar-cv/master/public/profile.jpg",
     "email": "krisz.magyar@gmail.com",
     "phone": "+36 30 573 0544",
     "summary": "Senior backend engineer with 8+ years of software engineering experience, specialised in Java and Apache Kafka, including 6+ years building event-driven, cloud-native microservices. Currently building a self-service data platform that lets producers and analytics consumers exchange data in a decoupled, governed way, streamlining end-to-end data-product creation. Track record across finance, HR and data-platform domains, with growing use of Python for infrastructure generation, batch data processing and data-contract validation. Hands-on with infrastructure-as-code in Terraform on AWS. Pragmatic about automation, testing, and helping teams move forward together.",
